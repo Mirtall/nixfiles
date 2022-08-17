@@ -21,6 +21,8 @@
         };
     };
 
+    home.file.".vimrc".source = ./vimrc;
+
     home.stateVersion = "22.05";
 }
 
