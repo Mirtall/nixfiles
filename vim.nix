@@ -1,4 +1,8 @@
 { pkgs, ...}: {
+    imports = [
+      ./coc-settings.nix
+    ];
+
     programs.vim = {
         enable = true;
 
@@ -7,7 +11,10 @@
             vim-vinegar
             vim-airline
             a-vim
+
+            # coc.nvim config
             coc-nvim
+            coc-clangd    # C/C++ lsp
         ];
 
         settings = {
@@ -39,7 +46,7 @@
             inoremap {<CR> {<CR>}<Esc>O
             inoremap [ []<Esc>i
             inoremap " ""<Esc>i
-            inoremap ' \'\'<Esc>i
+            inoremap ' '''<Esc>i
             noremap - ddp
             noremap _ ddkP
             inoremap <c-u> <esc>lvwUa
