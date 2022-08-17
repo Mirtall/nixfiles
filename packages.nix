@@ -22,6 +22,7 @@
         direnv
         dunst
         scrot
+        unrar
     ];
 }
 

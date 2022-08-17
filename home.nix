@@ -2,6 +2,7 @@
     imports = [
         ./packages.nix
         ./git.nix
+        ./vim.nix
     ];
 
     programs.home-manager.enable = true;
@@ -20,8 +21,6 @@
             package = pkgs.jdk;
         };
     };
-
-    home.file.".vimrc".source = ./vimrc;
 
     home.stateVersion = "22.05";
 }
