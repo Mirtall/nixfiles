@@ -9,6 +9,8 @@
         nodejs
         yarn
         git
+        rnix-lsp
+        ocaml
 
         # communication
         discord
