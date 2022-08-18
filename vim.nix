@@ -15,6 +15,7 @@
       # coc.nvim config
       coc-nvim
       coc-clangd    # C/C++ lsp
+      coc-pyright   # Python stuffs
     ];
 
     settings = {
