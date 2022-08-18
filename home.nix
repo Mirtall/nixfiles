@@ -3,6 +3,7 @@
         ./packages.nix
         ./git.nix
         ./vim.nix
+        ./bash.nix
     ];
 
     programs.home-manager.enable = true;
