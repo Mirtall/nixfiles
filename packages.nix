@@ -1,30 +1,28 @@
 { pkgs, ... } : {
-    home.packages = with pkgs; [
+  home.packages = with pkgs; [
+    # dev packages
+    jetbrains.idea-ultimate
+    docker
+    docker-compose
+    pkg-config
+    nodejs
+    yarn
+    git
+    rnix-lsp
 
-        # dev packages
-        jetbrains.idea-ultimate
-        docker
-        docker-compose
-        pkg-config
-        nodejs
-        yarn
-        git
-        rnix-lsp
-        ocaml
+    # communication
+    discord
+    slack
+    thunderbird
+    teams
 
-        # communication
-        discord
-        slack
-        thunderbird
-        teams
-
-        # others
-        gimp
-        qemu
-        direnv
-        dunst
-        scrot
-        unrar
-    ];
+    # others
+    gimp
+    qemu
+    direnv
+    dunst
+    scrot
+    unrar
+  ];
 }
 

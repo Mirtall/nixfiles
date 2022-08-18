@@ -1,32 +1,32 @@
 { pkgs, ...}: {
-    imports = [
-      ./coc-settings.nix
+  imports = [
+    ./coc-settings.nix
+  ];
+
+  programs.vim = {
+    enable = true;
+
+    plugins = with pkgs.vimPlugins; [
+      vim-fugitive
+      vim-vinegar
+      vim-airline
+      a-vim
+
+      # coc.nvim config
+      coc-nvim
+      coc-clangd    # C/C++ lsp
     ];
 
-    programs.vim = {
-        enable = true;
+    settings = {
+      background = "dark";
+      expandtab = true;
+      number = true;
+      relativenumber = true;
+      shiftwidth = 4;
+      tabstop = 8;
+    };
 
-        plugins = with pkgs.vimPlugins; [
-            vim-fugitive
-            vim-vinegar
-            vim-airline
-            a-vim
-
-            # coc.nvim config
-            coc-nvim
-            coc-clangd    # C/C++ lsp
-        ];
-
-        settings = {
-            background = "dark";
-            expandtab = true;
-            number = true;
-            relativenumber = true;
-            shiftwidth = 4;
-            tabstop = 8;
-        };
-
-        extraConfig = ''
+    extraConfig = ''
             filetype indent plugin on
 
             set completeopt=longest,menuone,popuphidden
@@ -97,8 +97,8 @@
             " change syntax settings for this repository
             let git_settings = system("git config --get vim.settings")
             if strlen(git_settings)
-            	exe "set" git_settings
+                exe "set" git_settings
             endif
-        '';
-    };
+    '';
+  };
 }
