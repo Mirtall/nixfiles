@@ -5,6 +5,8 @@
         ./vim.nix
         ./bash.nix
         ./urxvt.nix
+        ./bat.nix
+        ./java.nix
     ];
 
     programs.home-manager.enable = true;
@@ -17,11 +19,6 @@
 
     programs = {
         firefox.enable = true;
-
-        java = {
-            enable = true;
-            package = pkgs.jdk;
-        };
     };
 
 
