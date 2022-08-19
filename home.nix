@@ -7,6 +7,7 @@
         ./urxvt.nix
         ./bat.nix
         ./java.nix
+        ./firefox.nix
     ];
 
     programs.home-manager.enable = true;
@@ -14,13 +15,9 @@
     home.homeDirectory = "/home/ethan";
 
     services.lorri.enable = true;
+    services.dunst.enable = true;
 
     nixpkgs.config.allowUnfree = true;
-
-    programs = {
-        firefox.enable = true;
-    };
-
 
     home.stateVersion = "22.05";
 }
