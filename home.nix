@@ -4,6 +4,7 @@
         ./git.nix
         ./vim.nix
         ./bash.nix
+        ./urxvt.nix
     ];
 
     programs.home-manager.enable = true;
