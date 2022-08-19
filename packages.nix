@@ -23,6 +23,7 @@
     dunst
     scrot
     unrar
+    spotify
   ];
 }
 
