@@ -20,7 +20,6 @@
     gimp
     qemu
     direnv
-    dunst
     scrot
     unrar
     spotify
