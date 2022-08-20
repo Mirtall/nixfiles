@@ -11,6 +11,7 @@
       vim-vinegar
       vim-airline
       a-vim
+      ale
 
       # coc.nvim config
       coc-nvim
@@ -28,6 +29,8 @@
     };
 
     extraConfig = ''
+            let g:ale_disable_lsp = 1
+
             filetype indent plugin on
 
             set completeopt=longest,menuone,popuphidden
@@ -53,7 +56,6 @@
             inoremap <c-u> <esc>lvwUa
             nnoremap <c-U> vA<Esc>U<esc>
             nnoremap <leader>ev :vs $MYVIMRC<cr>
-            nnoremap <leader>sv :source $MYVIMRC<cr>
             nnoremap <leader>ss :A<cr>
 
             set cc=80
@@ -75,6 +77,22 @@
             autocmd Filetype cpp iabbrev cin std::cin
             autocmd Filetype cpp iabbrev cerr std::cerr
             autocmd Filetype cpp iabbrev clog std::clog
+
+            " ALE configuration
+            let g:ale_lint_on_enter = 0
+            let g:ale_lint_on_text_changed = 'never'
+            let g:ale_lint_on_insert_leave = 0
+            let g:ale_fix_on_save = 1
+            let g:ale_linters = {
+            \  'c': ['clangd'],
+            \ 'cpp': ['clangd'],
+            \}
+
+            let g:ale_fixers = {
+            \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \  'c': ['clang-format'],
+            \  'cpp': ['clang-format'],
+            \}
 
             " a.vim config
             let g:alternateExtensions_cc = "hh"
