@@ -2,6 +2,10 @@
   programs.bash = {
     enable = true;
 
+    shellAliases = {
+      cat = "bat";
+    };
+
     bashrcExtra = ''
       function linit {
         if [ $# -eq 0 ]; then
