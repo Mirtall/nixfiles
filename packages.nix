@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     # dev packages
     jetbrains.idea-ultimate
+    man-pages
     docker
     docker-compose
     pkg-config
@@ -25,4 +26,3 @@
     spotify
   ];
 }
-
