@@ -11,7 +11,7 @@
         if [ $# -eq 0 ]; then
           lorri init && direnv allow
         else
-          cp ~/dev/nix-stuffs/shells/$1/shell.nix . && lorri init && direnv allow
+          cp ~/dev/nix/shells/$1/shell.nix . && lorri init && direnv allow
         fi
       }
 
