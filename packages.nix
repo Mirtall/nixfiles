@@ -10,12 +10,14 @@
     yarn
     git
     rnix-lsp
+    man-pages
 
     # communication
     discord
     slack
     thunderbird
     teams
+    tdesktop
 
     # others
     gimp
