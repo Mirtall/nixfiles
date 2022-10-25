@@ -11,6 +11,8 @@
     git
     rnix-lsp
     man-pages
+    tig
+    ripgrep
 
     # communication
     discord

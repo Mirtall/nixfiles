@@ -10,13 +10,16 @@
       vim-fugitive
       vim-vinegar
       vim-airline
+      vim-surround
       a-vim
+      fzf-vim
       ale
 
       # coc.nvim config
       coc-nvim
       coc-clangd    # C/C++ lsp
       coc-pyright   # Python stuffs
+
     ];
 
     settings = {
@@ -57,6 +60,7 @@
             nnoremap <c-U> vA<Esc>U<esc>
             nnoremap <leader>ev :vs $MYVIMRC<cr>
             nnoremap <leader>ss :A<cr>
+            nnoremap <leader>es :Rg<cr>
 
             set cc=80
             set cinoptions+=:0
