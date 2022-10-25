@@ -8,6 +8,7 @@
         ./bat.nix
         ./java.nix
         ./firefox.nix
+        ./xresources.nix
     ];
 
     programs.home-manager.enable = true;
