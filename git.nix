@@ -12,7 +12,7 @@
 
     extraConfig = {
       core = { editor = "vim"; };
-      init = { defaultBranch = "main"; };
+      init = { defaultBranch = "master"; };
       pull = { rebase = true; };
     };
 
