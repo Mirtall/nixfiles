@@ -21,6 +21,10 @@
         fi
       }
 
+      function tsize {
+        printf '\33]50;%s\007' "xft:mono:size=$1"
+      }
+
       eval "$(direnv hook zsh)"
 
       export PGDATA="$HOME/postgres_data"

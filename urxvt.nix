@@ -2,7 +2,7 @@
   programs.urxvt = {
     enable = true;
 
-    fonts = [ "xft:bitstream vera sans mono:size=10:antialias=true" ];
+    fonts = [ "xft:mono:size=10:antialias=true" ];
     transparent = true;
     shading = 20;
     iso14755 = false;
