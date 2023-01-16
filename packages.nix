@@ -1,6 +1,7 @@
 { pkgs, ... } : {
   home.packages = with pkgs; [
     # dev packages
+    bintools-unwrapped
     jetbrains.idea-ultimate
     man-pages
     docker
@@ -10,9 +11,11 @@
     yarn
     git
     rnix-lsp
+    nixpkgs-fmt
     man-pages
     tig
     ripgrep
+    ghidra
 
     # communication
     discord

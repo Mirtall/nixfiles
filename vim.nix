@@ -19,7 +19,6 @@
       coc-nvim
       coc-clangd    # C/C++ lsp
       coc-pyright   # Python stuffs
-
     ];
 
     settings = {
@@ -56,11 +55,12 @@
             inoremap ' '''<Esc>i
             noremap - ddp
             noremap _ ddkP
-            inoremap <c-u> <esc>lvwUa
+            inoremap <c-u> <Esc>bveUea
             nnoremap <c-U> vA<Esc>U<esc>
             nnoremap <leader>ev :vs $MYVIMRC<cr>
             nnoremap <leader>ss :A<cr>
             nnoremap <leader>es :Rg<cr>
+            nnoremap <leader>gd :ALEGoToDefinition<cr>
 
             set cc=80
             set cinoptions+=:0
@@ -96,6 +96,7 @@
             \  '*': ['remove_trailing_lines', 'trim_whitespace'],
             \  'c': ['clang-format'],
             \  'cpp': ['clang-format'],
+            \  'nix': ['nixpkgs-fmt'],
             \}
 
             " a.vim config
@@ -114,6 +115,9 @@
               let col = col('.') - 1
               return !col || getline('.')[col - 1]  =~# '\s'
             endfunction
+
+            " rainbow configuration
+            let g:rainbow_active = 1
 
             " per .git vim configs
             " just `git config vim.settings "expandtab sw=4 sts=4"` in a git repository
