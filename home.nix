@@ -3,7 +3,6 @@
     ./packages.nix
     ./git.nix
     ./vim.nix
-    #./bash.nix
     ./urxvt.nix
     ./bat.nix
     ./java.nix
@@ -23,5 +22,5 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.stateVersion = "22.05";
+  home.stateVersion = "22.11";
 }

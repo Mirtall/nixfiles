@@ -31,5 +31,6 @@
     scrot
     unrar
     spotify
+    prismlauncher
   ];
 }

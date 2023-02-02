@@ -5,15 +5,18 @@
     userEmail = "ethan.zouzoulkowsky@gmail.com";
 
     ignores = [
-      "*.swp"     # vim temp files
-      "*~"        # emacs temp files
-      ".idea/"    # JetBrains IDE folders
+      "*.swp" # vim temp files
+      "*~" # emacs temp files
+      ".idea/" # JetBrains IDE folders
     ];
 
     extraConfig = {
       core = { editor = "vim"; };
       init = { defaultBranch = "master"; };
       pull = { rebase = true; };
+      alias = {
+        fire = "! git commit -m \"$(curl https://whatthecommit.com/index.txt)\"";
+      };
     };
 
     includes = [
