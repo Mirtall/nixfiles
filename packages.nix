@@ -1,4 +1,4 @@
-{ pkgs, ... } : {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     # dev packages
     bintools-unwrapped
@@ -31,6 +31,10 @@
     scrot
     unrar
     spotify
+    tree
+    evince
     prismlauncher
+    unzip
+    notion-app-enhanced
   ];
 }
