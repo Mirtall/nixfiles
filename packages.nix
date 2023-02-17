@@ -36,5 +36,7 @@
     prismlauncher
     unzip
     notion-app-enhanced
+    openvpn
+    networkmanagerapplet
   ];
 }
