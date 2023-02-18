@@ -38,5 +38,6 @@
     notion-app-enhanced
     openvpn
     networkmanagerapplet
+    feh
   ];
 }
