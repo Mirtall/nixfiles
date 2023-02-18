@@ -12,7 +12,7 @@
 
     extraConfig = {
       core = { editor = "vim"; };
-      init = { defaultBranch = "master"; };
+      init = { defaultBranch = "main"; };
       pull = { rebase = true; };
       alias = {
         fire = "! git commit -m \"$(curl https://whatthecommit.com/index.txt)\"";
