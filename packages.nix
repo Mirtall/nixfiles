@@ -39,5 +39,9 @@
     openvpn
     networkmanagerapplet
     feh
+    pavucontrol
+    file
+    wireguard-tools
+    nmap
   ];
 }
