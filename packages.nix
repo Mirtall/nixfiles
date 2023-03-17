@@ -23,6 +23,7 @@
     thunderbird
     teams
     tdesktop
+    slrn
 
     # others
     gimp
