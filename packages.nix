@@ -44,5 +44,6 @@
     file
     wireguard-tools
     nmap
+    arandr
   ];
 }
