@@ -16,18 +16,32 @@
       pull = { rebase = true; };
       alias = {
         fire = "! git commit -m \"$(curl https://whatthecommit.com/index.txt)\"";
+        cd = "switch";
       };
     };
 
     includes = [
       {
         condition = "gitdir:~/dev/prologin/";
-        contents = { user = { email = "ethan.zouzoulkowsky@prologin.org"; }; };
+        contents = {
+          user = {
+            email = "ethan.zouzoulkowsky@prologin.org";
+          };
+        };
       }
 
       {
         condition = "gitdir:~/dev/epita/";
-        contents = { user = { email = "ethan.zouzoulkowsky@epita.fr"; }; };
+        contents = {
+          user = {
+            email = "ethan.zouzoulkowsky@epita.fr";
+          };
+          extraConfig = {
+            init = {
+              defaultBranch = "master";
+            };
+          };
+        };
       }
     ];
   };
