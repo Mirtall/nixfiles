@@ -45,5 +45,6 @@
     wireguard-tools
     nmap
     arandr
+    htop
   ];
 }
