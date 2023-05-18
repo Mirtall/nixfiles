@@ -18,6 +18,15 @@
         fire = "! git commit -m \"$(curl https://whatthecommit.com/index.txt)\"";
         cd = "switch";
       };
+
+      signing = {
+        signByDefault = true;
+        key = "92571E374AE293CE";
+      };
+
+      commit.gpgsign = true;
+
+      tag.gpgsign = true;
     };
 
     includes = [
@@ -35,6 +44,7 @@
         contents = {
           user = {
             email = "ethan.zouzoulkowsky@epita.fr";
+            signingKey = "7B8DDB5C8EC4F388";
           };
           extraConfig = {
             init = {

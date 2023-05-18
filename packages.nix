@@ -45,6 +45,5 @@
     wireguard-tools
     nmap
     arandr
-    gnupg
   ];
 }

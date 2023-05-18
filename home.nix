@@ -2,6 +2,7 @@
   imports = [
     ./packages.nix
     ./git.nix
+    ./gnupg.nix
     ./vim.nix
     ./urxvt.nix
     ./bat.nix
@@ -9,6 +10,7 @@
     ./firefox.nix
     ./xresources.nix
     ./zsh.nix
+    ./bash.nix
   ];
 
   programs.home-manager.enable = true;
