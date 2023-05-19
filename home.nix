@@ -1,22 +1,24 @@
 { config, pkgs, ... }: {
   imports = [
-    ./packages.nix
+    ./bash.nix
+    ./bat.nix
+    ./firefox.nix
+    ./fonts.nix
     ./git.nix
     ./gnupg.nix
-    ./vim.nix
-    ./urxvt.nix
-    ./bat.nix
+    ./i3
     ./java.nix
-    ./firefox.nix
+    ./packages.nix
+    ./rofi
+    ./urxvt.nix
+    ./vim.nix
     ./xresources.nix
     ./zsh.nix
-    ./bash.nix
   ];
 
   programs.home-manager.enable = true;
   home.username = "ethan";
   home.homeDirectory = "/home/ethan";
-  # users.users.ethan.shell = "zsh";
 
   # FIXME: own files
   services.lorri.enable = true;
