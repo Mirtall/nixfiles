@@ -10,6 +10,7 @@
     ./java.nix
     ./packages.nix
     ./rofi
+    ./ssh.nix
     ./urxvt.nix
     ./vim.nix
     ./xresources.nix
