@@ -1,2 +1,0 @@
-# nixfiles
-My nix files

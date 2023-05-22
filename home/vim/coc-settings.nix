@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{ config, pkgs, ... }: {
   home.file.".vim/coc-settings.json".text = ''
     {
       "clangd.path": "${pkgs.clang-tools}/bin/clangd",
