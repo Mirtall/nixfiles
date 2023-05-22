@@ -18,8 +18,8 @@ in
 
       gaps = {
         smartBorders = "on";
-        inner = 5;
-        outer = 0;
+        inner = 7;
+        outer = 2;
       };
     };
   };
