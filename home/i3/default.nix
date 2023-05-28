@@ -10,7 +10,7 @@ in
     config = {
       modifier = "Mod4"; # Window key
       defaultWorkspace = "1";
-      keybindings = import ./keybindings.nix { inherit lib; };
+      keybindings = import ./keybindings.nix { inherit lib pkgs; };
 
       window = {
         border = 3;

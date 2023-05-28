@@ -13,6 +13,7 @@
   };
 
   imports = [
+    ./alacritty.nix
     ./bash.nix
     ./bat.nix
     ./firefox.nix

@@ -2,10 +2,10 @@
   programs.urxvt = {
     enable = true;
 
-    fonts = [ "xft:mono:size=10:antialias=true" ];
+    fonts = [ "xft:JetBrainsMono Nerd Font:size=10:antialias=true" ];
     transparent = true;
     shading = 20;
-    iso14755 = false;
+    iso14755 = true;
     scroll.bar.enable = false;
 
     extraConfig = {
