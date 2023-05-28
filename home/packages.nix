@@ -16,6 +16,7 @@
     tig
     ripgrep
     ghidra
+    neovim
 
     # communication
     discord
@@ -46,5 +47,6 @@
     nmap
     arandr
     htop
+    picom
   ];
 }
