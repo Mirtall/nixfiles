@@ -116,6 +116,7 @@
     git
     emacs
     virt-manager
+    gcc
   ];
 
   environment.pathsToLink = [ "/share/zsh" ];
