@@ -41,7 +41,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.verbose = true;
             home-manager.users = {
-              ethan = import ./home;
+              ethan = import ./home { inherit machine; };
             };
           }
         ];

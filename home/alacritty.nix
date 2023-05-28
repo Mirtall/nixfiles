@@ -1,10 +1,14 @@
-{ pkgs, ... }: {
+{ config, lib, pkgs, ... }:
+let
+  size = lib.strings.toInt (builtins.getEnv "TERMSIZE");
+in
+{
   programs.alacritty = {
     enable = true;
     settings = {
       scrolling = {
         history = 1000;
-        multiplier = 3;
+        multiplier = 4;
       };
 
       font = {
@@ -12,7 +16,7 @@
           family = "JetBrainsMono Nerd Font";
           style = "Regular";
         };
-        size = 6;
+        size = size;
       };
 
       cursor = {

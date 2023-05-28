@@ -1,5 +1,6 @@
-{ config, ... }:
-
+{ machine, ... }:
+let
+in
 {
   programs.home-manager.enable = true;
 
