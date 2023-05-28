@@ -46,13 +46,17 @@
           }
         ];
 
+      gen_config = machine:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = get_modules "${machine}";
+        };
     in
     {
       nixosConfigurations = {
-        laptop = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = get_modules "laptop";
-        };
+        laptop = gen_config "laptop";
+
+        desktop = gen_config "desktop";
       };
     };
 }
