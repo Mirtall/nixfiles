@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  size = lib.strings.toInt (builtins.getEnv "TERMSIZE");
+  #size = lib.strings.toInt (builtins.getEnv "TERMSIZE");
 in
 {
   programs.alacritty = {
@@ -16,7 +16,7 @@ in
           family = "JetBrainsMono Nerd Font";
           style = "Regular";
         };
-        size = size;
+        size = 6; #size;
       };
 
       cursor = {

@@ -119,10 +119,11 @@
     gcc
   ];
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.sessionVariables = {
+    TERMSIZE = "6";
+  };
 
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 57621 ];
+  environment.pathsToLink = [ "/share/zsh" ];
 
   system.stateVersion = "22.11"; # Did you read the comment?
 

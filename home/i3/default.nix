@@ -22,6 +22,10 @@ in
         outer = 2;
       };
     };
+
+    extraConfig = ''
+      exec --no-startup-id picom
+    '';
   };
 
   home.packages = [
