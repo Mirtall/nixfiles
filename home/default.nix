@@ -1,5 +1,11 @@
-{ machine, ... }:
+{ pkgs, machine, ... }:
 let
+  termsizes = {
+    laptop = 6;
+    desktop = 12;
+  };
+
+  size = termsizes."${machine}";
 in
 {
   programs.home-manager.enable = true;
@@ -14,7 +20,7 @@ in
   };
 
   imports = [
-    ./alacritty.nix
+    (import ./alacritty.nix { inherit pkgs size; })
     ./bash.nix
     ./bat.nix
     ./firefox.nix

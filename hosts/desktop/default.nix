@@ -113,10 +113,6 @@
     virt-manager
   ];
 
-  environment.sessionVariables = {
-    TERMSIZE = "12";
-  };
-
   environment.pathsToLink = [ "/share/zsh" ];
 
   system.stateVersion = "22.11"; # Did you read the comment?

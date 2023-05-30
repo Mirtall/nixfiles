@@ -41,7 +41,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.verbose = true;
             home-manager.users = {
-              ethan = import ./home { inherit machine; };
+              ethan = import ./home { pkgs = nixpkgs.legacyPackages.${system}; inherit machine; };
             };
           }
         ];
