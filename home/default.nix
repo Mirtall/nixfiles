@@ -30,6 +30,7 @@ in
     ./i3
     ./java.nix
     ./packages.nix
+    ./picom.nix
     ./rofi
     ./ssh.nix
     ./urxvt.nix
