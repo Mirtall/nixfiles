@@ -34,7 +34,8 @@ in
     ./rofi
     ./ssh.nix
     ./urxvt.nix
-    ./vim
+    #./vim
+    ./neovim.nix
     ./xresources.nix
     ./zsh.nix
   ];

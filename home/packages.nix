@@ -16,7 +16,6 @@
     tig
     ripgrep
     ghidra
-    neovim
 
     # communication
     discord
@@ -48,5 +47,8 @@
     arandr
     htop
     picom
+
+    cutter
+    vmware-workstation
   ];
 }
