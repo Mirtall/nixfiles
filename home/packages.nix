@@ -45,10 +45,7 @@
     wireguard-tools
     nmap
     arandr
-    htop
     picom
-
-    cutter
-    vmware-workstation
+    btop
   ];
 }
