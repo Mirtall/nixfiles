@@ -22,14 +22,9 @@
         fi
       }
 
-      function tsize {
-        printf '\33]50;%s\007' "xft:mono:size=$1"
-      }
-
       eval "$(direnv hook zsh)"
 
-      export PGDATA="$HOME/postgres_data"
-      export PGHOST="/tmp"
+      export SSH_AUTH_SOCK="$(${pkgs.gnupg}/bin/gpgconf --list-dirs agent-ssh-socket)"
     '';
 
     oh-my-zsh = {
