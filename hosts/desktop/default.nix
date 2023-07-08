@@ -111,6 +111,7 @@
     vim
     emacs
     wget
+    gcc
     virt-manager
   ];
 
