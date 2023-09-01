@@ -10,7 +10,7 @@
     nodejs
     yarn
     git
-    rnix-lsp
+    nil
     nixpkgs-fmt
     man-pages
     tig
