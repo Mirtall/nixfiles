@@ -3,7 +3,6 @@
     # dev packages
     bintools-unwrapped
     jetbrains.idea-ultimate
-    man-pages
     docker
     docker-compose
     pkg-config
@@ -23,7 +22,6 @@
     thunderbird
     teams
     tdesktop
-    slrn
 
     # others
     gimp

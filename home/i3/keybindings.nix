@@ -1,6 +1,5 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, modifier, ... }:
 let
-  modifier = "Mod4"; # Windows key
   terminal = "${pkgs.alacritty}/bin/alacritty";
 in
 lib.mkOptionDefault {

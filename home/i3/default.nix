@@ -1,6 +1,6 @@
 { pkgs, config, lib, ... }:
 let
-  modifier = "Mod4";
+  modifier = "Mod4"; # Super key
 in
 {
   xsession.windowManager.i3 = {
@@ -8,9 +8,9 @@ in
     package = pkgs.i3-gaps;
 
     config = {
-      modifier = "Mod4"; # Window key
+      inherit modifier;
       defaultWorkspace = "1";
-      keybindings = import ./keybindings.nix { inherit lib pkgs; };
+      keybindings = import ./keybindings.nix { inherit lib pkgs modifier; };
 
       window = {
         border = 3;
