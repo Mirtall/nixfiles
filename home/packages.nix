@@ -45,5 +45,6 @@
     arandr
     picom
     btop
+    qbittorrent
   ];
 }
