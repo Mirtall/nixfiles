@@ -2,6 +2,6 @@
   programs.neovim = {
     enable = true;
     vimAlias = true;
-    viAlias = true;
+    # viAlias = true;
   };
 }

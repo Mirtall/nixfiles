@@ -23,6 +23,8 @@
 
       eval "$(direnv hook zsh)"
 
+      alias unnix="sed -E 's,/nix/store/[^-]+-,,g'"
+
       export SSH_AUTH_SOCK="$(${pkgs.gnupg}/bin/gpgconf --list-dirs agent-ssh-socket)"
     '';
 

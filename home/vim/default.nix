@@ -14,6 +14,7 @@
       a-vim
       fzf-vim
       ale
+      Coqtail
 
       # coc.nvim config
       coc-nvim
