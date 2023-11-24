@@ -14,7 +14,7 @@ in
   services.dunst.enable = true;
 
   home = rec {
-    stateVersion = "22.11";
+    stateVersion = "23.05";
     username = "ethan";
     homeDirectory = "/home/${username}";
   };
@@ -28,6 +28,7 @@ in
     ./git.nix
     ./gnupg.nix
     ./i3
+    ./polybar
     ./java.nix
     ./packages.nix
     ./picom.nix
@@ -35,6 +36,7 @@ in
     ./ssh.nix
     ./urxvt.nix
     ./neovim.nix
+    ./vim
     ./xresources.nix
     ./zsh.nix
   ];

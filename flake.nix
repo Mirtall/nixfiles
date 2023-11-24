@@ -23,12 +23,10 @@
   };
 
   outputs =
-    { self
-    , flake-utils
-    , nixpkgs
+    { nixpkgs
     , home-manager
     , ...
-    }@inputs:
+    }:
     let
       system = "x86_64-linux";
 
