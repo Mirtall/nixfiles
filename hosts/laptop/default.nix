@@ -134,6 +134,7 @@
   documentation.dev.enable = true;
 
   environment.systemPackages = with pkgs; [
+    virtiofsd
     wget
     vim
     git
@@ -142,7 +143,7 @@
     gcc
   ];
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = [ "/share/zsh" "/share" ];
 
   system.stateVersion = "22.11"; # Did you read the comment?
 
