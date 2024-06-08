@@ -15,12 +15,17 @@
     tig
     ripgrep
     ghidra
+    stylua
+    fzf
+    fd
+    postgresql
+    openssl
+    curlFull.dev
 
     # communication
     discord
     slack
     thunderbird
-    teams
     tdesktop
 
     # others
@@ -44,7 +49,8 @@
     nmap
     arandr
     picom
-    btop
     qbittorrent
+    vlc
+    htop
   ];
 }

@@ -47,10 +47,8 @@
             email = "ethan.zouzoulkowsky@epita.fr";
             signingKey = "7B8DDB5C8EC4F388";
           };
-          extraConfig = {
-            init = {
-              defaultBranch = "master";
-            };
+          init = {
+            defaultBranch = "master";
           };
         };
       }
