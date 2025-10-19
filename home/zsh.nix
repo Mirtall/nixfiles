@@ -12,7 +12,7 @@
       toto = "mkdir toto && cd toto && linit $1";
     };
 
-    initExtra = ''
+    initContent = ''
       function linit {
         if [ $# -eq 0 ]; then
           lorri init && direnv allow

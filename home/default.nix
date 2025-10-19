@@ -1,12 +1,4 @@
 { pkgs, machine, ... }:
-let
-  termsizes = {
-    laptop = 6;
-    desktop = 12;
-  };
-
-  size = termsizes."${machine}";
-in
 {
   programs.home-manager.enable = true;
 
@@ -14,17 +6,16 @@ in
   services.dunst.enable = true;
 
   home = rec {
-    stateVersion = "23.05";
+    stateVersion = "25.11";
     username = "ethan";
     homeDirectory = "/home/${username}";
   };
 
   imports = [
-    (import ./alacritty.nix { inherit pkgs size; })
+    # ./alacritty/alacritty.nix
     ./bash.nix
     ./bat.nix
     ./firefox.nix
-    ./fonts.nix
     ./git.nix
     ./gnupg.nix
     ./i3

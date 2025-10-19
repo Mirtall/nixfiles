@@ -1,4 +1,4 @@
-{ pkgs, size, ... }:
+{ pkgs, ... }:
 {
   programs.alacritty = {
     enable = true;
@@ -9,7 +9,6 @@
       };
 
       font = {
-        inherit size;
         normal = {
           family = "JetBrainsMono Nerd Font";
           style = "Regular";

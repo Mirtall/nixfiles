@@ -1,11 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   services.gpg-agent = {
     enable = true;
-    # enableSshSupport = true;
-    # pinentryFlavor = "tty";
-    # defaultCacheTtl = 3600;
+    pinentry.package = pkgs.pinentry-tty;
   };
 
   programs = {

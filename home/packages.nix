@@ -21,6 +21,7 @@
     postgresql
     openssl
     curlFull.dev
+    nerd-fonts.jetbrains-mono
 
     # communication
     discord
@@ -52,5 +53,6 @@
     qbittorrent
     vlc
     htop
+    gparted
   ];
 }

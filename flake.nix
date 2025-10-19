@@ -1,60 +1,31 @@
 {
-  description = "My nix config";
+  description = "Home Manager configuration of ethan";
 
   inputs = {
-    nixpkgs = {
-      type = "github";
-      owner = "NixOS";
-      repo = "nixpkgs";
-      ref = "nixos-unstable";
-    };
+    # Specify the source of Home Manager and Nixpkgs.
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      type = "github";
-      owner = "nix-community";
-      repo = "home-manager";
-      ref = "master";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    flake-utils = {
-      type = "github";
-      owner = "numtide";
-      repo = "flake-utils";
     };
   };
 
   outputs =
-    { nixpkgs
-    , home-manager
-    , ...
-    }:
+    { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-
-      get_modules = machine:
-        [
-          ./hosts/${machine}
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useUserPackages = true;
-            home-manager.useGlobalPkgs = true;
-            home-manager.verbose = true;
-            home-manager.users = {
-              ethan = import ./home { pkgs = nixpkgs.legacyPackages.${system}; inherit machine; };
-            };
-          }
-        ];
-
-      gen_config = machine:
-        nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = get_modules "${machine}";
-        };
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations = {
-        laptop = gen_config "laptop";
+      homeConfigurations."ethan" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-        desktop = gen_config "desktop";
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [ ./home ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
       };
     };
 }
