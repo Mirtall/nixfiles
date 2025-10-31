@@ -27,7 +27,7 @@
     ./polybar
     ./rofi
     ./shell/bash.nix
-    ./shell/zsh.nix
+    ./shell/zsh
     ./ssh.nix
     ./vim
     # ./xresources.nix

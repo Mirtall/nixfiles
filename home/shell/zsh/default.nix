@@ -5,7 +5,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = import ./aliases.nix;
+    shellAliases = import ../aliases.nix;
     initContent = ''
       function linit {
         if [ $# -eq 0 ]; then
@@ -20,6 +20,7 @@
       source ~/.p10k.zsh
     '';
 
+
     oh-my-zsh = {
       enable = true;
       theme = "kafeitu";
@@ -31,5 +32,8 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+  };
+  home.file.".p10k.zsh" = {
+    source = ./.p10k.zsh;
   };
 }
