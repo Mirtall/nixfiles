@@ -23,7 +23,7 @@
 
       signing = {
         signByDefault = true;
-        key = "92571E374AE293CE";
+        key = "4A63CA99E29B2A22";
       };
 
       commit.gpgsign = true;
@@ -46,10 +46,19 @@
         contents = {
           user = {
             email = "ethan.zouzoulkowsky@epita.fr";
-            signingKey = "7B8DDB5C8EC4F388";
           };
           init = {
             defaultBranch = "master";
+          };
+        };
+      }
+
+      {
+        condition = "gitdir:~/dev/epita";
+        contents = {
+          user = {
+            email = "ethan@therya.com";
+            signingKey = "016BCDD8724E5372";
           };
         };
       }
