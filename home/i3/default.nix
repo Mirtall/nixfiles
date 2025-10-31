@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, lib, config, ... }:
 let
   modifier = "Mod4"; # Super key
 in
@@ -10,7 +10,7 @@ in
     config = {
       inherit modifier;
       defaultWorkspace = "1";
-      keybindings = import ./keybindings.nix { inherit lib pkgs modifier; };
+      keybindings = import ./keybindings.nix { inherit lib pkgs modifier config; };
 
       bars = [ ];
 
@@ -24,10 +24,11 @@ in
 
     extraConfig = ''
       exec --no-startup-id polybar
+      exec --no-startup-id feh --bg-fill ~/Wallpaper.jpg
     '';
   };
 
   home.packages = [
-    pkgs.i3lock
+    pkgs.betterlockscreen
   ];
 }

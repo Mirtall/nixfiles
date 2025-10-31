@@ -8,6 +8,7 @@
       "*.swp" # vim temp files
       "*~" # emacs temp files
       ".idea/" # JetBrains IDE folders
+      "result" # nix derivation result
     ];
 
     extraConfig = {

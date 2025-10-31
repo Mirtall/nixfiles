@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.alacritty = {
     enable = true;
+    package =
+      (config.lib.nixGL.wrap pkgs.alacritty);
+    theme = "nord";
     settings = {
       scrolling = {
         history = 1000;
@@ -26,7 +29,7 @@
         opacity = 0.8;
       };
 
-      shell.program = "${pkgs.zsh}/bin/zsh";
+      terminal.shell = "${pkgs.zsh}/bin/zsh";
     };
   };
 }

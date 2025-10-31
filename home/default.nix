@@ -1,18 +1,20 @@
-{ pkgs, machine, ... }:
+{ nixGL, ... }:
 {
   programs.home-manager.enable = true;
 
   services.lorri.enable = true;
   services.dunst.enable = true;
 
-  home = rec {
+  home = {
     stateVersion = "25.11";
     username = "ethan";
-    homeDirectory = "/home/${username}";
+    homeDirectory = "/home/ethan";
   };
 
+  nixGL.packages = nixGL.packages;
+
   imports = [
-    # ./alacritty/alacritty.nix
+    ./alacritty.nix
     ./bash.nix
     ./bat.nix
     ./firefox.nix
@@ -25,7 +27,6 @@
     ./picom.nix
     ./rofi
     ./ssh.nix
-    ./urxvt.nix
     ./neovim.nix
     ./vim
     ./xresources.nix
