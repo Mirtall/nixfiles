@@ -15,21 +15,21 @@
 
   imports = [
     ./alacritty.nix
-    ./bash.nix
     ./bat.nix
     ./firefox.nix
     ./git.nix
     ./gnupg.nix
     ./i3
-    ./polybar
     ./java.nix
+    ./neovim.nix
     ./packages.nix
     ./picom.nix
+    ./polybar
     ./rofi
+    ./shell/bash.nix
+    ./shell/zsh.nix
     ./ssh.nix
-    ./neovim.nix
     ./vim
-    ./xresources.nix
-    ./zsh.nix
+    # ./xresources.nix
   ];
 }

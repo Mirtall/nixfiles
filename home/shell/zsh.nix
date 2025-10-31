@@ -5,13 +5,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      cat = "bat";
-      remi = "nmcli connection up Remi";
-      dtc = "docker run -v ~/dev/epita/tiger/tc:/tc/ --rm -it --user 1000 tiger:stable";
-      toto = "mkdir toto && cd toto && linit $1";
-    };
-
+    shellAliases = import ./aliases.nix;
     initContent = ''
       function linit {
         if [ $# -eq 0 ]; then
@@ -22,8 +16,6 @@
       }
 
       eval "$(direnv hook zsh)"
-
-      alias unnix="sed -E 's,/nix/store/[^-]+-,,g'"
 
       export SSH_AUTH_SOCK="$(${pkgs.gnupg}/bin/gpgconf --list-dirs agent-ssh-socket)"
     '';

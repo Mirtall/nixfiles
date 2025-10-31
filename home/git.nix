@@ -19,6 +19,10 @@
         fire = "! git commit -m \"$(curl https://whatthecommit.com/index.txt)\"";
         cd = "switch";
         l = "log -20 --graph --format=\"%C(auto)%h %Cblue%an%C(auto)%d %C(brightblack)%ah %Cred%G?%n  %s\"";
+        puf = "push --force";
+        rc = "rebase --continue";
+        ri = "rebase -i";
+        cpc = "cherry-pick --continue";
       };
 
       signing = {
