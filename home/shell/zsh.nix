@@ -17,12 +17,19 @@
 
       eval "$(direnv hook zsh)"
 
-      export SSH_AUTH_SOCK="$(${pkgs.gnupg}/bin/gpgconf --list-dirs agent-ssh-socket)"
+      source ~/.p10k.zsh
     '';
 
     oh-my-zsh = {
       enable = true;
       theme = "kafeitu";
     };
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
   };
 }
