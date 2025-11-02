@@ -1,8 +1,6 @@
-{ pkgs, ... }: {
+{ ... }: {
   programs.git = {
     enable = true;
-    userName = "Ethan Zouzoulkowsky";
-    userEmail = "ethan.zouzoulkowsky@gmail.com";
 
     ignores = [
       "*.swp" # vim temp files
@@ -11,8 +9,15 @@
       "result" # nix derivation result
     ];
 
-    extraConfig = {
-      core = { editor = "vim"; };
+    settings = {
+      user =
+        {
+          name = "Ethan Zouzoulkowsky";
+          email = "ethan.zouzoulkowsky@gmail.com";
+        };
+      core = {
+        editor = "vim";
+      };
       init = { defaultBranch = "main"; };
       pull = { rebase = true; };
       alias = {

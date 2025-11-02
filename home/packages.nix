@@ -22,12 +22,13 @@
     openssl
     curlFull.dev
     nerd-fonts.jetbrains-mono
+    luajitPackages.tiktoken_core
 
     # communication
     discord
     slack
     thunderbird
-    tdesktop
+    telegram-desktop
 
     # others
     gimp
