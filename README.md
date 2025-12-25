@@ -1,1 +1,3 @@
-My nixos configuration (using home-manager)
+# Nix configuration
+
+Using home-manager & system-manager

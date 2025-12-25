@@ -63,7 +63,7 @@
       }
 
       {
-        condition = "gitdir:~/dev/epita";
+        condition = "gitdir:~/dev/therya/";
         contents = {
           user = {
             email = "ethan@therya.com";

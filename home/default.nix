@@ -11,7 +11,7 @@
     homeDirectory = "/home/ethan";
   };
 
-  nixGL.packages = nixGL.packages;
+  targets.genericLinux.nixGL.packages = nixGL.packages;
 
   imports = [
     ./alacritty.nix

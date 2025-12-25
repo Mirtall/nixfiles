@@ -3,5 +3,7 @@
   dtc = "docker run -v ~/dev/epita/tiger/tc:/tc/ --rm -it --user 1000 tiger:stable";
   toto = "mkdir toto && cd toto && linit $1";
   gst = "git status";
-  gitlog = "git log --online --graph";
+  gca = "git commit --amend";
+  glog = "git log --online --graph";
+  nix-stray-roots = "nix-store --gc --print-roots | egrep -v \"^(/nix/var|/run/\w+-system|\{memory)\"";
 }

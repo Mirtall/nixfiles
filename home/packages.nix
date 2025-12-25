@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     # dev packages
     bintools-unwrapped
-    jetbrains.idea-ultimate
+    jetbrains.idea
     docker
     docker-compose
     pkg-config
@@ -23,6 +23,8 @@
     curlFull.dev
     nerd-fonts.jetbrains-mono
     luajitPackages.tiktoken_core
+    markdownlint-cli
+    mdformat
 
     # communication
     discord
