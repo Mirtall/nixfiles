@@ -1,3 +1,3 @@
-# Nix configuration
+# Nix home configuration
 
-Using home-manager & system-manager
+Using home-manager
